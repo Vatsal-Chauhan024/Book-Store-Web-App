@@ -1,0 +1,41 @@
+textarea{
+    resize: none;
+}
+body{
+    font-family: "Poppins";
+}
+.below-card{
+    background-color: rgba(0, 0, 0, 0.356);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    width: 100%;
+    height: 0;
+}
+
+.above-card:hover{
+    z-index: 0;
+}
+.above-card:hover h2{
+    opacity: 0;
+}
+.above-card:hover .below-card{
+    height: 100%;
+    width: 100%;
+    z-index: 20;
+    cursor: pointer;
+}
+.button-link{
+  display: none;
+  transform: translate(0);
+}
+.above-card:hover .button-link{
+    display: block;
+    scale: 1.5;
+    transform: translate(38%);
+ 
+}
+h2, .below-card, .above-card, .button-link{
+    transition: all 0.5s ease;
+}
